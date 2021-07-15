@@ -1,0 +1,19 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: meizu-phone-provider
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/meizu?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+
+      username: root
+      password: zya20010922
+mybatis:
+  type-aliases-package: com.wuhu.meizubeans.pojo
+  mapper-locations: classpath:mappers/*Mapper.xml
+eureka:
+  client:
+    service-Url:
+      defaultZone: http://localhost:8080/eureka
